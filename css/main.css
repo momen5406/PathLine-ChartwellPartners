@@ -1,3 +1,4 @@
+/* Start Global */
 :root {
   --primary-color: #103060;
   --secondary-color: #006BC9;
@@ -17,7 +18,56 @@ html {
 
 body {
   background-color: var(--contrast-color);
+  color: var(--primary-color);
+
   font-family: "Fira Sans", sans-serif;
   font-weight: 400;
   font-optical-sizing: auto;
 }
+/* End Global */
+
+/* Start Nav */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--contrast-color);
+  box-shadow: 0 0 10px 1px #e7e7e7;
+  padding: 30px 50px;
+}
+
+nav .links {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  gap: 50px;
+  font-weight: 700;
+}
+
+nav .links a {
+  text-decoration: none;
+  color: inherit;
+  text-transform: uppercase;
+  font-size: .875rem;
+  letter-spacing: 2px;
+}
+
+nav .links a.contact {
+  background-color: var(--contrast-color);
+  color: var(--secondary-color);
+  border: 1px solid var(--secondary-color);
+  padding: 15px 40px;
+  overflow: hidden;
+  position: relative;
+}
+
+nav .links a.contact:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: red;
+}
+/* End Nav */
