@@ -1,0 +1,23 @@
+:root {
+  --primary-color: #103060;
+  --secondary-color: #006BC9;
+  --contrast-color: #fff;
+  --grey-color: #F5F6F8;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--contrast-color);
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 400;
+  font-optical-sizing: auto;
+}
