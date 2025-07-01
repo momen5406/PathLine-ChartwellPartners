@@ -1,32 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chartwell Partners</title>
-  <link rel="shortcut icon" href="img/icon.jpg" type="image/x-icon">
-  <!-- Fira Sans - DM Serif Text -- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css">
-  <!-- Main CSS File -->
-  <link rel="stylesheet" href="css/main.css">
-</head>
-<body>
-  <nav>
-    <div class="logo">
-      <img src="img/logo.svg" alt="Chartwell Partners">
-    </div>
-    
-    <ul class="links">
-      <li><a href="#">Our Firm</a></li>
-      <li><a href="#">Expertise</a></li>
-      <li><a href="#">Services</a></li>
-      <li><i class="fa-solid fa-search"></i></li>
-      <li><a href="#" class="contact">Contact US</a></li>
-    </ul>
-  </nav>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Chartwell Partners</title>
+        <link rel="shortcut icon" href="img/icon.jpg" type="image/x-icon" />
+        <!-- Fira Sans - DM Serif Text -- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet"
+        />
+        <!-- Font Awesome -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"
+        />
+        <!-- Main CSS File -->
+        <link rel="stylesheet" href="css/main.css" />
+    </head>
+    <body>
+        <nav>
+            <div class="logo">
+                <img src="img/logo.svg" alt="Chartwell Partners" />
+            </div>
+
+            <ul class="links">
+                <li><a href="#">Our Firm</a></li>
+                <li id="dropdown" class="dropdown">
+                    <a href="#"
+                        >Expertise <i class="fa-solid fa-angle-down"></i
+                    ></a>
+                    <ul class="d-none dropdown-menu">
+                      <li><a href="#">Biopharmaceuticals</a></li>
+                      <li><a href="#">Financial Services</a></li>
+                      <li><a href="#">Real Estate</a></li>
+                    </ul>
+                </li>
+                <li id="dropdown" class="dropdown">
+                    <a href="#"
+                        >Services <i class="fa-solid fa-angle-down"></i
+                    ></a>
+                    <ul class="d-none dropdown-menu">
+                      <li><a href="#">Executive Search</a></li>
+                      <li><a href="#">Board Services</a></li>
+                      <li><a href="#">Leadership Advisory</a></li>
+                    </ul>
+                </li>
+                <li class="search-container">
+                    <div id="searchInputContainer" class="input-container close-search">
+                        <i class="fa-solid fa-search"></i>
+                        <input type="search" name="search" id="searchInput" />
+                        <i id="closeSearchBTN" class="fa-solid fa-xmark"></i>
+                    </div>
+                    <i id="openSearchBTN" class="fa-solid fa-search"></i>
+                </li>
+                <li>
+                    <a id="contactBtn" href="#" class="contact"
+                        ><span>Contact US</span></a
+                    >
+                </li>
+            </ul>
+
+            <li id="menuBtn" class="fa-solid fa-bars"></li>
+        </nav>
+
+        <script src="js/main.js"></script>
+    </body>
 </html>
