@@ -1,4 +1,6 @@
-/* Start Global */
+/* ==========================================================================
+    Global Styles
+   ========================================================================== */
 :root {
   --primary-color: #103060;
   --secondary-color: #006BC9;
@@ -6,6 +8,16 @@
   --grey-color: #F5F6F8;
   --main-transition: .3s ease-in-out;
   --main-shadow: 0 0 10px 1px #e7e7e7;
+
+  /* Font Sizes */
+  --font-size-sm: .875rem;
+  --font-size-md: 1.125rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.75rem;
+
+  /* Font Families */
+  --primary-font: "Fira Sans", sans-serif;
+  --secondary-font: "DM Text Serif", sans-serif;
 }
 
 * {
@@ -21,8 +33,7 @@ html {
 body {
   background-color: var(--contrast-color);
   color: var(--primary-color);
-
-  font-family: "Fira Sans", sans-serif;
+  font-family: var(--primary-font);
   font-weight: 400;
   font-optical-sizing: auto;
 }
@@ -31,13 +42,14 @@ ul {
   list-style: none;
 }
 
+/* Hide default search cancel button in Webkit browsers */
 input[type="search"]::-webkit-search-cancel-button {
   display: none;
   -webkit-appearance: none;
 }
-/* End Global */
-
-/* Start Nav */
+/* ==========================================================================
+    Navigation Bar Styles
+   ========================================================================== */
 nav {
   display: flex;
   align-items: center;
@@ -45,11 +57,11 @@ nav {
   background-color: var(--contrast-color);
   box-shadow: var(--main-shadow);
   padding: 30px 50px;
-
   position: fixed;
   width: 100%;
 }
 
+/* Navigation Links */
 nav .links {
   display: flex;
   align-items: center;
@@ -57,6 +69,11 @@ nav .links {
   font-weight: 700;
 }
 
+nav .links .right-icon {
+  display: none;
+}
+
+/* Search Container (Desktop) */
 nav .links .search-container {
   position: relative;
 }
@@ -66,6 +83,7 @@ nav .links .search-container > i:hover {
   cursor: pointer;
 }
 
+/* Navigation Links Styling */
 nav .links a {
   text-decoration: none;
   color: inherit;
@@ -76,6 +94,7 @@ nav .links a {
   padding-bottom: 3px;
 }
 
+/* Underline Animation on Hover */
 nav .links > li > a::after {
   content: '';
   position: absolute;
@@ -91,6 +110,7 @@ nav .links > li > a:hover::after {
   width: 100%;
 }
 
+/* Dropdown Menus */
 nav .links .dropdown {
   position: relative;
 }
@@ -101,7 +121,7 @@ nav .links .dropdown ul {
   left: 0;
   background-color: white;
   box-shadow: var(--main-shadow);
-  padding: 0 20px;
+  padding: 0 var(--font-size-lg);
 }
 
 .d-none {
@@ -111,7 +131,7 @@ nav .links .dropdown ul {
 nav .links .dropdown ul li {
   display: inline-block;
   white-space: nowrap;
-  padding: 20px 0;
+  padding: var(--font-size-lg) 0;
   width: 100%;
 }
 
@@ -122,7 +142,7 @@ nav .links .dropdown ul li:not(:last-of-type) {
 nav .links .dropdown ul a {
   font-weight: 400;
   letter-spacing: 0;
-  font-size: 14px;
+  font-size: var(--font-size-sm);
   text-transform: capitalize;
 }
 
@@ -130,6 +150,7 @@ nav .links .dropdown ul a:hover {
   font-weight: 700;
 }
 
+/* Search Input Container (Desktop) */
 nav .links .input-container {
   width: 400px;
   position: absolute;
@@ -146,22 +167,21 @@ nav .links .input-container {
 nav .links .input-container input {
   padding: 10px;
   width: 100%;
-  /* margin: 0 20px; */
   outline: none;
   border: none;
   font-family: inherit;
   background-color: transparent;
   color: #A8B2C1;
-  font-size: 18px;
+  font-size: var(--font-size-md);
 }
 
 nav .links .input-container i {
-  margin: 15px 20px;
+  margin: 15px var(--font-size-lg);
 }
 
 nav .links .input-container i:last-of-type {
   color: #A8B2C1;
-  font-size: 18px;
+  font-size: var(--font-size-md);
   cursor: pointer;
 }
 
@@ -169,11 +189,13 @@ nav .links .input-container i:last-of-type:hover {
   color: var(--primary-color);
 }
 
+/* Hide Search Input (Desktop) */
 .close-search {
   width: 0 !important;
   transition: var(--main-transition);
 }
 
+/* Contact Button (Desktop) */
 nav .links a.contact {
   background-color: var(--contrast-color);
   color: var(--secondary-color);
@@ -200,6 +222,7 @@ nav .links a.contact span {
   z-index: 2;
 }
 
+/* Contact Button Hover Effects */
 .hover {
   color: white !important;
 }
@@ -214,19 +237,208 @@ nav .links a.contact span {
   height: 0;
 }
 
+/* Hamburger Menu Icon (Mobile) */
 nav #menuBtn {
-  font-size: 28px;
+  font-size: var(--font-size-xl);
   cursor: pointer;
   display: none;
 }
 
+/* ==========================================================================
+    Desktop Only Styles
+   ========================================================================== */
+@media (min-width: 1024px) {
+  nav .search-close-icons {
+    display: none;
+  }
+  nav .phone-search {
+    display: none;
+  }
+}
+
+/* ==========================================================================
+    Mobile & Tablet Styles
+   ========================================================================== */
 @media (max-width: 1024px) {
+  /* Search & Close Icons (Mobile) */
+  nav .search-close-icons {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    z-index: 5;
+    color: white;
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: var(--main-transition);
+    z-index: 5;
+  }
+
+  nav .search-close-icons i {
+    cursor: pointer;
+    font-size: var(--font-size-lg);
+  }
+
+  nav .search-close-icons i:hover {
+    color: var(--secondary-color);
+  }
+
+  nav .search-close-icons #closeMenu {
+    position: relative;
+    z-index: 999;
+    margin-left: auto;
+  }
+
+  /* Mobile Search Input */
+  nav .phone-search {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--primary-color);
+    padding: 150px 50px;
+    color: white;
+    transition: var(--main-transition);
+    z-index: 4;
+  }
+
+  nav .phone-search i {
+    position: absolute;
+    top: 80px;
+    left: 30px;
+    padding: 0;
+    font-size: var(--font-size-lg);
+    cursor: pointer;
+  }
+
+  nav .phone-search i:hover {
+    color: var(--secondary-color);
+  }
+
+  nav .phone-search input {
+    outline: none;
+    border: none;
+    border-left: 1px solid white;
+    background-color: transparent;
+    font-family: var(--secondary-font);
+    font-size: var(--font-size-xl);
+    padding: 10px var(--font-size-lg);
+    color: var(--grey-color);
+  }
+
+  /* Mobile Navigation Links */
   nav .links {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100vh;
+    background: var(--primary-color);
+    color: white !important;
+    flex-direction: column;
+    align-items: start;
+    gap: 40px;
+    padding: 100px 50px;
+    font-size: var(--font-size-md);
+    font-weight: 700;
+    transition: var(--main-transition);
+  }
+
+  nav .links li {
+    width: 100%;
+  }
+
+  nav .links li a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: var(--font-size-md);
+  }
+
+  nav .links li a:not(.contact):hover {
+    color: #B8C1D0 !important;
+  }
+
+  /* Dropdowns (Mobile) */
+  nav .links .dropdown {
+    position: relative;
+    display: block !important;
+  }
+
+  nav .links .dropdown ul {
+    position: relative;
+    box-shadow: none;
+    background-color: transparent;
+    top: 0;
+    margin-top: var(--font-size-lg);
+    padding: 0 0 0 var(--font-size-lg);
+  }
+
+  /* Show dropdowns by default on mobile */
+  .d-none {
+    display: block;
+  }
+
+  nav .links .dropdown ul li {
+    width: 100%;
+    border: none !important;
+    padding: 15px 0;
+  }
+
+  nav .links .dropdown ul a {
+    font-size: var(--font-size-md);
+  }
+
+  nav .links .dropdown ul a:hover {
+    color: inherit !important;
+  }
+
+  /* Contact Button (Mobile) */
+  nav .links .contact-container {
+    text-align: center;
+  }
+
+  nav .links a.contact {
+    background-color: transparent;
+    color: var(--contrast-color) !important;
+    border: 1px solid var(--contrast-color);
+    padding: 15px 70px;
+    text-align: center;
+    margin: auto;
+    display: inline-block;
+  }
+
+  nav .links a.contact::after {
+    background: var(--contrast-color);
+  }
+
+  nav .links a.contact:hover {
+    color: var(--primary-color) !important;
+  }
+
+  /* Hide Desktop Search Bar on Mobile */
+  nav .links .search-container {
     display: none;
   }
 
+  /* Hide Dropdown Icon, Show Right Icon (Mobile) */
+  nav .links .dropdown-icon {
+    display: none;
+  }
+
+  nav .links .right-icon {
+    display: inline-block;
+  }
+
+  /* Hamburger Menu Icon (Mobile) */
   nav #menuBtn {
     display: block;
+    cursor: pointer;
   }
 }
-/* End Nav */
+/* ==========================================================================
+    End of Navigation Styles
+   ========================================================================== */
