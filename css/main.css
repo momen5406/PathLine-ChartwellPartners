@@ -439,6 +439,21 @@ nav #menuBtn {
     cursor: pointer;
   }
 }
+
+@media (max-width: 767px) {
+  nav {
+    padding: 20px;
+  }
+
+  nav .links {
+    padding: 80px 30px;
+    gap: 30px;
+  }
+
+  nav .links .dropdown ul {
+    margin-top: 10px;
+  }
+}
 /* ==========================================================================
     End of Navigation Styles
    ========================================================================== */
