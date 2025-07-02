@@ -69,4 +69,4 @@ This project is for educational and demonstration purposes.
 ---
 
 **Author:**  
-PathLine Internship – Web Development 1
+Mo'men at PathLine
