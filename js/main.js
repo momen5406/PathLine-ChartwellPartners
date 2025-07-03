@@ -21,21 +21,25 @@ closeSearchBTN.addEventListener("click", () => {
 // Navigation Contact Button Hover Effects
 // ==========================================================================
 
-// Contact button element
-const contactBTN = document.querySelector("#contactBtn");
-contactBTN.classList.remove("leave");
-contactBTN.classList.remove("hover");
+// Select all contact buttons (can be multiple in DOM)
+const contactButtons = document.querySelectorAll("#contactBtn");
 
-// Add hover effect on mouseover
-contactBTN.addEventListener("mouseover", () => {
-  contactBTN.classList.add("hover");
-  contactBTN.classList.remove("leave");
-});
+contactButtons.forEach((btn) => {
+  // Ensure no hover/leave classes on load
+  btn.classList.remove("leave");
+  btn.classList.remove("hover");
 
-// Remove hover effect on mouseout
-contactBTN.addEventListener("mouseout", () => {
-  contactBTN.classList.remove("hover");
-  contactBTN.classList.add("leave");
+  // Add hover effect on mouseover
+  btn.addEventListener("mouseover", () => {
+    btn.classList.add("hover");
+    btn.classList.remove("leave");
+  });
+
+  // Remove hover effect on mouseout
+  btn.addEventListener("mouseout", () => {
+    btn.classList.remove("hover");
+    btn.classList.add("leave");
+  });
 });
 
 // ==========================================================================
@@ -49,23 +53,23 @@ dropdownBTN.forEach(toggle => {
   // Show dropdown menu on mouseenter
   toggle.addEventListener("mouseenter", e => {
     const dropdown = e.target.closest(".dropdown");
-    const menu = dropdown.querySelector(".dropdown-menu");
+    const menu = dropdown.querySelector(".dropdownMenu");
 
     // Hide other open dropdowns
-    document.querySelectorAll(".dropdown-menu").forEach(m => {
-      if (m !== menu) m.classList.add("d-none");
+    document.querySelectorAll(".dropdownMenu").forEach(m => {
+      if (m !== menu) m.classList.add("dNone");
     });
 
-    menu.classList.remove("d-none");
+    menu.classList.remove("dNone");
   });
 
   // Hide dropdown menu after delay on mouseleave
   toggle.addEventListener("mouseleave", e => {
     const dropdown = e.target.closest(".dropdown");
-    const menu = dropdown.querySelector(".dropdown-menu");
+    const menu = dropdown.querySelector(".dropdownMenu");
 
     setTimeout(() => {
-      menu.classList.add("d-none");
+      menu.classList.add("dNone");
     }, 3000);
   });
 });
