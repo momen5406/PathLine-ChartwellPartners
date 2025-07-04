@@ -10,6 +10,19 @@ window.addEventListener("load", function () {
   }, 500); 
 })
 
+const backToTop = document.querySelector("#backToTop");
+
+window.onscroll = function () {
+  if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+    backToTop.style.opacity = "100";
+  } else {
+    backToTop.style.opacity = "0";
+  }
+}
+
+backToTop.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+})
 // ==========================================================================
 // Navigation Contact Button Hover Effects
 // ==========================================================================
