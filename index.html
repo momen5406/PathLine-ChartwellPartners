@@ -50,98 +50,58 @@
         <img src="img/logo.svg" alt="Chartwell Partners" />
       </div>
 
-      <!-- Mobile Search & Close Icons -->
-      <div id="searchCloseIcon" class="search-close-icons">
-        <i class="fa-solid fa-search"></i>
-        <i id="closeMenu" class="fa-solid fa-xmark"></i>
-      </div>
-
-      <!-- Mobile Search Input -->
-      <div id="phoneSearchInput" class="phone-search">
-        <i class="fa-solid fa-angle-left"></i>
-        <input type="search" name="search" placeholder="Search..." />
-      </div>
-
-      <!-- Navigation Links -->
-      <ul id="phoneMenu" class="links">
-        <!-- Our Firm Link -->
-        <li>
-          <a href="#">
-            Our Firm
-            <i class="fa-solid fa-angle-right right-icon"></i>
-          </a>
-        </li>
-        <!-- Expertise Dropdown -->
-        <li id="dropdown" class="dropdown">
-          <a href="#">
-            Expertise
-            <i class="fa-solid fa-angle-down dropdown-icon"></i>
-          </a>
-          <ul class="dNone dropdownMenu">
-            <li>
-              <a href="#">
-                Biopharmaceuticals
-                <i class="fa-solid fa-angle-right right-icon"></i>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                Financial Services
-                <i class="fa-solid fa-angle-right right-icon"></i>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                Real Estate
-                <i class="fa-solid fa-angle-right right-icon"></i>
-              </a>
-            </li>
+      <ul id="menuLinks" class="links">
+        <li id="dropdown-link" class="dropdown-link">
+          <a href="#">Our Firm <i class="fa-solid fa-angle-down"></i></a>
+          <ul id="dropdownMenu" class="dropdown">
+            <li><a href="#">Our Story</a></li>
+            <li><a href="#">Our Team</a></li>
+            <li><a href="#">Our Values</a></li>
+            <li><a href="#">Offices</a></li>
           </ul>
         </li>
-        <!-- Services Dropdown -->
-        <li id="dropdown" class="dropdown">
-          <a href="#">
-            Services
-            <i class="fa-solid fa-angle-down dropdown-icon"></i>
-          </a>
-          <ul class="dNone dropdownMenu">
-            <li>
-              <a href="#">
-                Executive Search
-                <i class="fa-solid fa-angle-right right-icon"></i>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                Board Services
-                <i class="fa-solid fa-angle-right right-icon"></i>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                Leadership Advisory
-                <i class="fa-solid fa-angle-right right-icon"></i>
-              </a>
-            </li>
+        <li id="dropdown-link" class="dropdown-link industries">
+          <a href="#">Industries <i class="fa-solid fa-angle-down"></i></a>
+          <ul id="dropdownMenu" class="dropdown">
+            <li><a href="#">Healthcare</a></li>
+            <li><a href="#">Financial Services</a></li>
+            <li><a href="#">Industrial</a></li>
+            <li><a href="#">Technology</a></li>
+            <li><a href="#">Consumer & Retail</a></li>
+            <li><a href="#">Real Estate</a></li>
           </ul>
         </li>
-        <!-- Desktop Search Bar -->
-        <li class="search-container">
-          <div id="searchInputContainer" class="input-container close-search">
-            <i class="fa-solid fa-search"></i>
-            <input type="search" name="search" id="searchInput" />
-            <i id="closeSearchBTN" class="fa-solid fa-xmark"></i>
-          </div>
-          <i id="openSearchBTN" class="fa-solid fa-search"></i>
+        <li id="dropdown-link" class="dropdown-link services-link">
+          <a href="#">Services <i class="fa-solid fa-angle-down"></i></a>
+          <ul id="dropdownMenu" class="dropdown">
+            <li><a href="#">Executive Search</a></li>
+            <li><a href="#">Board Services</a></li>
+            <li><a href="#">Leadership Consulting</a></li>
+            <li><a href="#">Talent Assessment</a></li>
+            <li><a href="#">Succession Planning</a></li>
+          </ul>
         </li>
-        <!-- Contact Button -->
-        <li class="contact-container">
-          <a id="contactBtn" href="#" class="contact special-button">
-            <span>Contact US</span>
-          </a>
+        <li id="dropdown-link" class="dropdown-link insights">
+          <a href="#">Insights <i class="fa-solid fa-angle-down"></i></a>
+          <ul id="dropdownMenu" class="dropdown">
+            <li><a href="#">Articles & News</a></li>
+            <li><a href="#">Case Studies</a></li>
+            <li><a href="#">Reports</a></li>
+            <li><a href="#">Press Releases</a></li>
+          </ul>
+        </li>
+        <li id="dropdown-link"  class="dropdown-link careers">
+          <a href="#">Careers <i class="fa-solid fa-angle-down"></i></a>
+          <ul id="dropdownMenu" class="dropdown">
+            <li><a href="#">Join Our Team</a></li>
+            <li><a href="#">Life at Chartwell</a></li>
+            <li><a href="#">Internship Programs</a></li>
+            <li><a href="#">Open Positions</a></li>
+          </ul>
         </li>
       </ul>
 
+      <a id="contactBtn" href="#" class="out-contact special-button"><span>Contact Us</span></a>
       <!-- Hamburger Menu Icon (mobile) -->
       <li id="menuBtn" class="fa-solid fa-bars"></li>
     </nav>

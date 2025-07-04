@@ -11,25 +11,6 @@ window.addEventListener("load", function () {
 })
 
 // ==========================================================================
-// Search Input (Desktop)
-// ==========================================================================
-
-// Elements for desktop search bar open/close
-const closeSearchBTN = document.querySelector("#closeSearchBTN");
-const openSearchBTN = document.querySelector("#openSearchBTN");
-const searchInputContainer = document.querySelector("#searchInputContainer");
-
-// Open search input on click
-openSearchBTN.addEventListener("click", () => {
-  searchInputContainer.classList.remove("close-search");
-});
-
-// Close search input on click
-closeSearchBTN.addEventListener("click", () => {
-  searchInputContainer.classList.add("close-search");
-});
-
-// ==========================================================================
 // Navigation Contact Button Hover Effects
 // ==========================================================================
 
@@ -59,76 +40,75 @@ contactButtons.forEach((btn) => {
 // ==========================================================================
 
 // All dropdown toggle anchors
-const dropdownBTN = document.querySelectorAll("#dropdown > a");
+if ( window.innerWidth > 1300 ) {
+  const dropdownLink = document.querySelectorAll("#dropdown-link a");
 
-dropdownBTN.forEach(toggle => {
-  // Show dropdown menu on mouseenter
-  toggle.addEventListener("mouseenter", e => {
-    const dropdown = e.target.closest(".dropdown");
-    const menu = dropdown.querySelector(".dropdownMenu");
+  dropdownLink.forEach(link => {
+    link.addEventListener("mouseover", () => {
+      dropdown = link.nextElementSibling;
+      dropdown.style.opacity = '100';
+      dropdown.style.zIndex = '9999';
 
-    // Hide other open dropdowns
-    document.querySelectorAll(".dropdownMenu").forEach(m => {
-      if (m !== menu) m.classList.add("dNone");
-    });
+      document.querySelectorAll("#dropdownMenu").forEach(d => {
+        if ( d != dropdown ) {
+          d.style.opacity = '0';
+          d.style.zIndex = '1';
+        }
+      })
+    })
 
-    menu.classList.remove("dNone");
+    link.addEventListener("mouseout", ()=> {
+      setTimeout(() => {
+        dropdown = link.nextElementSibling;
+        dropdown.style.opacity = '0';
+        dropdown.style.zIndex = '1';
+      }, 3000);
+    })
   });
+}
 
-  // Hide dropdown menu after delay on mouseleave
-  toggle.addEventListener("mouseleave", e => {
-    const dropdown = e.target.closest(".dropdown");
-    const menu = dropdown.querySelector(".dropdownMenu");
+if ( window.innerWidth <= 1300 ) {
+  const menuBtn = document.querySelector("#menuBtn");
+  const menu = document.querySelector("#menuLinks");
+  menuBtn.addEventListener("click", () => {
+    document.querySelectorAll("#dropdownMenu").forEach(d => {
+        d.style.height = `0`;
+        d.style.padding = `0`;
+    })
 
     setTimeout(() => {
-      menu.classList.add("dNone");
-    }, 3000);
-  });
-});
+      menu.classList.toggle("menu-open");
+    }, 300);
+  })
 
-// ==========================================================================
-// Mobile Navigation (Hamburger, Search, Close)
-// ==========================================================================
 
-// Elements for mobile navigation
-const menuBtn = document.querySelector("#menuBtn");
-const menu = document.querySelector("#phoneMenu");
-const searchCloseIcon = document.querySelector("#searchCloseIcon");
-const closeMenu = document.querySelector("#closeMenu");
 
-// Open mobile menu
-menuBtn.addEventListener("click", () => {
-  menu.style.left = 0;
-  searchCloseIcon.style.display = 'flex !important';
-  searchCloseIcon.style.left = 0;
-});
+  const navHeight = document.querySelector("nav").offsetHeight;
+  const screenHeight = window.innerHeight;
+  const menuLinks = document.querySelector("#menuLinks");
+  menuLinks.style.minHeight = `${screenHeight - navHeight}px`;
+  menuLinks.style.top = `${navHeight}px`;
 
-// Close mobile menu
-closeMenu.addEventListener("click", () => {
-  menu.style.left = "100%";
-  // searchCloseIcon.style.display = 'none';
-  searchCloseIcon.style.left = "100%";
-  phoneSearchInput.style.left = "-100%";
-  phoneSearchBtn.style.display = "inline-block";
-});
+  const dropdownLink = document.querySelectorAll("#dropdown-link a");
 
-// Elements for mobile search
-const phoneSearchInput = document.querySelector("#phoneSearchInput");
-const phoneCloseSearchBtn = document.querySelector("#phoneSearchInput i");
-const phoneSearchBtn = document.querySelector("#searchCloseIcon i");
-phoneSearchBtn.style.display = "inline-block";
+  dropdownLink.forEach(link => {
+    link.addEventListener("click", () => {
+      dropdown = link.nextElementSibling;
+      dropdown.style.height = dropdown.scrollHeight + 'px';
+      dropdown.style.padding = `15px`;
 
-// Open mobile search input
-phoneSearchBtn.addEventListener("click", () => {
-  phoneSearchInput.style.left = 0;
-  phoneSearchBtn.style.display = "none";
-});
+      document.querySelectorAll("#dropdownMenu").forEach(d => {
+        if ( d != dropdown ) {
+          d.style.height = `0`;
+          d.style.padding = `0`;
+        }
+      })
+    })
+  })
+    
+}
 
-// Close mobile search input
-phoneCloseSearchBtn.addEventListener("click", () => {
-  phoneSearchInput.style.left = "-100%";
-  phoneSearchBtn.style.display = "inline-block";
-});
+
 
 // ==========================================================================
 // End of main.js
