@@ -208,15 +208,17 @@ nav .links .dropdown {
   background-color: var(--contrast-color);
   /* color: white; */
   box-shadow: var(--main-shadow);
-  padding: 20px;
-  padding-right: 0;
-
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+  padding: 0;
 
   opacity: 0;
   transition: var(--main-transition);
+}
+
+nav .links .inner {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 nav .links .industries .dropdown {

@@ -95,12 +95,10 @@ if ( window.innerWidth <= 1300 ) {
     link.addEventListener("click", () => {
       dropdown = link.nextElementSibling;
       dropdown.style.height = dropdown.scrollHeight + 'px';
-      dropdown.style.padding = `15px`;
 
       document.querySelectorAll("#dropdownMenu").forEach(d => {
         if ( d != dropdown ) {
           d.style.height = `0`;
-          d.style.padding = `0`;
         }
       })
     })
