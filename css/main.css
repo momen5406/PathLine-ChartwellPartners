@@ -352,6 +352,21 @@ nav #menuBtn {
     content: none;
   }
 
+  nav .links .in-contact {
+    padding: 15px 40px;
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+  }
+
+  nav .links .in-contact::after {
+    background: white;
+  }
+
+  nav .links .in-contact.hover {
+    color: var(--primary-color) !important;
+  }
+
 
   nav .out-contact {
     display: none;
