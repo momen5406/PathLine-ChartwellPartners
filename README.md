@@ -25,13 +25,13 @@ In addition to duplicating the initial site structure and appearance, I added:
    - Responsive navbar with dropdown effect.
 
 3. **🔝 Scroll-to-Top Button**
-   - Displays on scroll and returns user to the top with smooth animation.
+   - Displays on scroll and returns the user to the top with smooth animation.
 
 4. **⏳ Animated Loading Overlay**
    - Subtle loading animation when the website is first loaded.
 
 5. **📶 Scroll Progress Indicator**
-   -  A dynamic progress bar at the top of the site showing how much of the page is scrolled.
+   -  A dynamic progress bar at the top of the site shows how much of the page is scrolled.
 
 ---
 
