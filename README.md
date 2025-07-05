@@ -1,72 +1,74 @@
-# Chartwell Partners Website
+# 🧠 PathLine-ChartwellPartners (Clone & Feature Enhancement)
 
-This repository contains the source code for the Chartwell Partners website, built as part of a web development internship project.
-
-## Project Structure
-
-```
-Chartwell Partners/
-│
-├── css/
-│   └── main.css         # Main stylesheet for the website
-├── img/
-│   └── ...              # Images and icons used in the site
-├── js/
-│   └── main.js          # JavaScript for navigation and interactivity
-├── index.html           # Main HTML file
-└── README.md            # Project documentation (this file)
-```
-
-## Features
-
-- **Responsive Navigation Bar:**  
-  Includes logo, navigation links with dropdowns, search bar (desktop), contact button, and hamburger menu for mobile.
-- **Mobile Support:**  
-  Mobile-specific search, menu, and navigation interactions.
-- **Dropdown Menus:**  
-  Expertise and Services sections feature dropdowns for additional navigation.
-- **Accessible Search:**  
-  Search bar available on both desktop and mobile.
-- **Modern Design:**  
-  Uses Google Fonts, Font Awesome icons, and CSS variables for easy theming.
-
-## Technologies Used
-
-- **HTML5**
-- **CSS3** (with CSS variables for colors, font sizes, and transitions)
-- **JavaScript** (for navigation and UI interactivity)
-- **Google Fonts** (Fira Sans, DM Serif Text)
-- **Font Awesome** (for icons)
-
-## How to Run
-
-1. Clone or download the repository.
-2. Open `index.html` in your web browser.
-3. Make sure the `css/`, `js/`, and `img/` folders are in the same directory as `index.html`.
-
-## Customization
-
-- **Colors and Fonts:**  
-  Easily change colors and font sizes in `css/main.css` using the `:root` CSS variables.
-- **Navigation Links:**  
-  Edit the navigation structure in `index.html` to add or remove links and dropdowns.
-- **Images:**  
-  Replace images in the `img/` folder as needed (e.g., logo, favicon).
-
-## File Overview
-
-- `index.html`  
-  Main HTML structure for the website.
-- `css/main.css`  
-  Styles for layout, navigation, responsiveness, and theming.
-- `js/main.js`  
-  Handles navigation bar interactivity, dropdowns, and mobile menu/search toggling.
-
-## License
-
-This project is for educational and demonstration purposes.
+This project is a **cloned and enhanced version** of the real [Chartwell Partners](https://chartwellpartners.com/) website. The goal of this task was to **rebuild the original layout**, maintain its visual identity, and **add new interactive and responsive features** as part of my internship at **Pathline**.
 
 ---
 
-**Author:**  
-Mo'men at PathLine
+## 📌 Task Objective
+
+This was a frontend development assignment for the **Pathline Internship Program**, where I was asked to:
+- Recreate an existing professional website layout.
+- Use modern web standards (HTML, CSS, JS).
+- Add useful and creative enhancements.
+- Practice clean and scalable code architecture.
+
+---
+
+## 🚀 Features Added
+
+In addition to replicating the original site’s structure and style, I added:
+
+1. **💡 Light / Dark Mode Toggle**
+   - Smooth theme switching using CSS variables and JavaScript.
+
+2. **📱 Responsive Hamburger Menu**
+   - Mobile-friendly navbar with dropdown support.
+
+3. **🔝 Scroll-to-Top Button**
+   - Appears on scroll and returns user to the top with smooth animation.
+
+4. **⏳ Animated Loading Overlay**
+   - Stylish loading animation when the site first loads.
+
+5. **🌀 Mobile Services Carousel**
+   - Auto-animated fading of services section on smaller devices using pure CSS.
+
+---
+
+## 🛠️ Technologies Used
+
+- **HTML5** – Semantic structure
+- **CSS3** – Responsive layout, animations, variables
+- **JavaScript (Vanilla)** – DOM manipulation, scroll events, theme toggle
+- **Font Awesome** – Icons
+- **GitHub Pages** – Hosting
+
+---
+
+## 🌐 Live Preview
+
+🔗 [View the website here](https://momen5406.github.io/PathLine-ChartwellPartners/)
+
+---
+
+## 📂 Project Structure
+
+```bash
+PathLine-ChartwellPartners/
+├── index.html
+├── style.css
+├── script.js
+└── assets/
+    └── images, fonts, etc.
+
+## 📣 Credits
+
+- The original design and layout inspiration is taken from [Chartwell Partners](https://chartwellpartners.com/).
+- This project is educational only and not for commercial use.
+
+---
+
+## 👨‍💻 Developed by
+
+Mo'men Hussein
+Intern @ Pathline
