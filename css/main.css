@@ -6,10 +6,12 @@
   --primary-color: #103060;
   --secondary-color: #006BC9;
   --contrast-color: #ffffff;
-  --grey-color: #F5F6F8;
+  --grey-color: #F5F7FA;
   --card-color: #ffffff;
   --text-color: #103060;
   --muted-text-color: rgba(0, 0, 0, 0.5); 
+  --primary-section-color: #fff;
+  --secondary-section-color: #F5F7FA;
   --border-color: #D8DDE5;
   --footer-link-color: white;
   --footer-hover-color: #CFD6DF;
@@ -35,6 +37,8 @@
   --grey-color: #1E1E1E;
   --card-color: #2A2D35;
   --text-color: #ffffff;
+  --primary-section-color: #252728;
+  --secondary-section-color: #1C1C1D;
   --muted-text-color: rgba(255, 255, 255, 0.5);
   --border-color: #333842;
   --footer-link-color: #e0e0e0;
@@ -83,10 +87,11 @@ input[type="search"]::-webkit-search-cancel-button {
    ========================================================================== */
 section {
   padding: 100px 0;
+  background-color: var(--primary-section-color);
 }
 
 section:nth-of-type(odd) {
-  background-color: var(--grey-color);
+  background-color: var(--secondary-section-color);
 }
 
 section h2 {
@@ -200,7 +205,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--grey-color);
+  background-color: var(--secondary-section-color);
   box-shadow: var(--main-shadow);
   padding: 15px 50px;
   position: fixed;
@@ -733,7 +738,7 @@ header h2 {
     Team Section Styles
    ========================================================================== */
 .team {
-  margin-bottom: 120px;
+  padding-bottom: 200px;
 }
 
 .team .row {
