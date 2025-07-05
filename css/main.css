@@ -2,15 +2,23 @@
     Global Styles
    ========================================================================== */
 :root {
+  /* Light Theme Variables */
   --primary-color: #103060;
   --secondary-color: #006BC9;
-  --contrast-color: #fff;
+  --contrast-color: #ffffff;
   --grey-color: #F5F6F8;
-  --main-transition: .3s ease-in-out;
-  --main-shadow: 0 0 10px rgba(0, 0, 0, .05);
+  --card-color: #ffffff;
+  --text-color: #103060;
+  --muted-text-color: rgba(0, 0, 0, 0.5); 
+  --border-color: #D8DDE5;
+  --footer-link-color: white;
+  --footer-hover-color: #CFD6DF;
+
+  --main-transition: 0.3s ease-in-out;
+  --main-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 
   /* Font Sizes */
-  --font-size-sm: .875rem;
+  --font-size-sm: 0.875rem;
   --font-size-md: 1.125rem;
   --font-size-lg: 1.25rem;
   --font-size-xl: 1.75rem;
@@ -19,6 +27,22 @@
   --primary-font: "Fira Sans", sans-serif;
   --secondary-font: "DM Serif Text", sans-serif;
 }
+
+[data-theme="dark"] {
+  --primary-color: #1B2A47;
+  --secondary-color: #339CFF;
+  --contrast-color: #121212;
+  --grey-color: #1E1E1E;
+  --card-color: #2A2D35;
+  --text-color: #ffffff;
+  --muted-text-color: rgba(255, 255, 255, 0.5);
+  --border-color: #333842;
+  --footer-link-color: #e0e0e0;
+  --footer-hover-color: #ffffff;
+
+  --main-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+}
+
 
 /* Reset and base styles */
 * {
@@ -33,7 +57,7 @@ html {
 
 body {
   background-color: var(--contrast-color);
-  color: var(--primary-color);
+  color: var(--text-color);
   font-family: var(--primary-font);
   font-weight: 400;
   font-optical-sizing: auto;
@@ -70,6 +94,7 @@ section h2 {
   font-size: 2.75rem;
   font-weight: 400;
   margin-bottom: 3rem;
+  color: var(--text-color);
 }
 
 .loading {
@@ -90,26 +115,46 @@ section h2 {
   justify-content: center;
   border-radius: 50%;
   font-size: 1.5rem;
-  background-color: var(--primary-color);
   color: white;
   z-index: 3;
   cursor: pointer;
   opacity: 0;
   transition: var(--main-transition);
+  background-color: var(--primary-color);
+  color: white;
+  box-shadow: var(--main-shadow);
+
+}
+
+.colorMode {
+  position: fixed;
+  right: 0;
+  top: 200px;
+  z-index: 99;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: var(--main-shadow);
 }
 
 /* =========================================================================
     Special Button Styles
    ========================================================================== */
 .special-button {
+  background-color: transparent;
+  color: var(--secondary-color);
+  border: 1px solid var(--secondary-color);
   text-decoration: none;
   text-transform: uppercase;
   font-size: var(--font-size-sm);
   font-weight: 700;
   letter-spacing: 2px;
-  background-color: var(--contrast-color);
-  color: var(--secondary-color);
-  border: 1px solid var(--secondary-color);
   padding: 15px 40px;
   overflow: hidden;
   position: relative;
@@ -135,7 +180,7 @@ section h2 {
 
 /* Contact Button Hover Effects */
 .hover {
-  color: white !important;
+  color: var(--contrast-color) !important;
 }
 
 .hover::after {
@@ -155,13 +200,14 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--contrast-color);
+  background-color: var(--grey-color);
   box-shadow: var(--main-shadow);
   padding: 15px 50px;
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 999;
+  color: var(--text-color);
 }
 
 /* Navigation Links */
@@ -170,6 +216,7 @@ nav .links {
   align-items: center;
   gap: 50px;
   font-weight: 700;
+  color: var(--text-color);
 }
 
 nav .links .right-icon {
@@ -189,7 +236,7 @@ nav .links .search-container > i:hover {
 /* Navigation Links Styling */
 nav .links a {
   text-decoration: none;
-  color: inherit;
+  color: var(--text-color);
   text-transform: uppercase;
   font-size: var(--font-size-sm);
   letter-spacing: 2px;
@@ -225,10 +272,9 @@ nav .links .dropdown {
   width: var(--width);
   margin-left: calc(var(--width) / -2);
   background-color: var(--contrast-color);
-  /* color: white; */
+  color: var(--text-color);
   box-shadow: var(--main-shadow);
   padding: 0;
-
   opacity: 0;
   transition: var(--main-transition);
 }
@@ -244,15 +290,15 @@ nav .links .industries .dropdown {
   --width: 380px;
 }
 
-nav .links .services-link .dropdown  {
+nav .links .services-link .dropdown {
   --width: 420px;
 }
 
-nav .links .careers .dropdown  {
+nav .links .careers .dropdown {
   --width: 400px;
 }
 
-nav .links .insights .dropdown  {
+nav .links .insights .dropdown {
   --width: 400px;
 }
 
@@ -290,6 +336,7 @@ nav .links .dropdown li a {
   letter-spacing: 0;
   font-weight: 400;
   padding-left: 5px;
+  color: var(--text-color);
 }
 
 /* Hamburger Menu Icon (Mobile) */
@@ -297,6 +344,7 @@ nav #menuBtn {
   font-size: var(--font-size-xl);
   cursor: pointer;
   display: none;
+  color: var(--text-color);
 }
 
 /* =========================================================================
@@ -324,10 +372,8 @@ nav #menuBtn {
     align-items: flex-start;
     padding: 50px;
     gap: 20px;
-
     transform: scaleY(0);
     transform-origin: top;
-
     transition: var(--main-transition);
   }
 
@@ -341,6 +387,7 @@ nav #menuBtn {
 
   nav .links > li > a {
     font-size: 1.5rem;
+    color: white;
   }
 
   nav .links .dropdown {
@@ -353,11 +400,9 @@ nav #menuBtn {
     padding: 0 15px;
     height: 0;
     gap: 10px;
-
     opacity: 1;
-    background-color: var(--contrast-color);
+    background-color: var(--grey-color);
     color: var(--primary-color);
-
     transition: .3s ease;
     overflow: hidden;
   }
@@ -371,26 +416,29 @@ nav #menuBtn {
     content: none;
   }
 
+  nav .links .dropdown li::before {
+    color: white;
+  }
+
   nav .links .in-contact {
     padding: 15px 40px;
     background-color: transparent;
-    color: white;
-    border: 1px solid white;
+    color: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
   }
 
   nav .links .in-contact::after {
-    background: white;
+    background: var(--secondary-color);
   }
 
   nav .links .in-contact.hover {
     color: var(--primary-color) !important;
   }
 
-
   nav .out-contact {
     display: none;
   }
-  /* Hamburger Menu Icon (Mobile) */
+
   nav #menuBtn {
     display: block;
     cursor: pointer;
@@ -411,6 +459,7 @@ nav #menuBtn {
     width: 100%;
   }
 }
+
 /* =========================================================================
     End of Navigation Styles
    ========================================================================== */
@@ -500,7 +549,7 @@ header h2 {
   align-items: center;
   justify-content: center;
   background-color: var(--primary-color);
-  color: var(--contrast-color);
+  color: white;
   padding: 40px 0;
 }
 
@@ -513,7 +562,7 @@ header h2 {
 }
 
 .services .service:not(:last-of-type) {
-  border-right: 1px solid var(--contrast-color);
+  border-right: 1px solid white;
 }
 
 .services .service h4 {
@@ -533,7 +582,7 @@ header h2 {
     display: block;
     font-size: .75rem;
     font-weight: 400;
-    color: rgba(255, 255, 255, 0.5);
+    color: var(--muted-text-color);
     text-transform: uppercase;
     letter-spacing: 1px;
   }
@@ -602,8 +651,8 @@ header h2 {
 }
 
 .expertise .box > div {
-  background-color: var(--contrast-color);
-  box-shadow: 0 0 10px rgba(0, 0, 0, .05);
+  background-color: var(--card-color);
+  box-shadow: var(--main-shadow);
   padding: 25px;
   display: flex;
   flex-direction: column;
@@ -718,11 +767,11 @@ header h2 {
   left: 50%;
   margin-left: -40%;
   z-index: 5;
-  background-color: white;
+  background-color: var(--card-color);
   width: 80%;
   padding: 20px;
   text-align: center;
-  box-shadow: 0 0 10px rgba(0, 0, 0, .05);
+  box-shadow: var(--main-shadow);
 }
 
 .team .member .content h5 {
@@ -784,7 +833,7 @@ header h2 {
 
 .companies .testimonials .content {
   width: 50%;
-  border-bottom: 1px solid #D8DDE5;
+  border-bottom: 1px solid var(--border-color);
   padding: 20px 0;
 }
 
@@ -801,7 +850,7 @@ header h2 {
 }
 
 .companies .testimonials .content:first-of-type {
-  border-top: 1px solid #D8DDE5;
+  border-top: 1px solid var(--border-color);
 }
 
 .companies .testimonials h5 {
@@ -823,7 +872,7 @@ header h2 {
    ========================================================================== */
 footer {
   background-color: var(--primary-color);
-  color: var(--contrast-color);
+  color: white;
   padding: 40px 0;
 }
 
@@ -838,8 +887,8 @@ footer img {
 
 footer .special-button {
   background-color: transparent;
-  color: var(--contrast-color) !important;
-  border: 1px solid var(--contrast-color);
+  color: var(--secondary-color) !important;
+  border: 1px solid var(--secondary-color);
 }
 
 footer .contact:hover {
@@ -847,7 +896,7 @@ footer .contact:hover {
 }
 
 footer .special-button::after {
-  background: var(--contrast-color);
+  background: var(--secondary-color);
 }
 
 footer .hover {
@@ -878,7 +927,7 @@ footer a {
   font-weight: 400;
   text-transform: capitalize;
   text-decoration: none;
-  color: white;
+  color: var(--footer-link-color);
   margin: 5px 0;
 }
 
@@ -892,11 +941,11 @@ footer .copyrights {
 
 footer .copyrights a {
   font-size: 1.5rem;
-  color: var(--contrast-color);
+  color: white;
 }
 
 footer .copyrights a:hover {
-  color: #CFD6DF;
+  color: var(--footer-hover-color);
 }
 
 footer .copyrights a:not(:last-of-type) {

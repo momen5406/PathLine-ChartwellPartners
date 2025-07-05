@@ -23,6 +23,16 @@ window.onscroll = function () {
 backToTop.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 })
+
+const colorMode = document.querySelector("#colorMode");
+
+colorMode.addEventListener("click", () => {
+  if ( document.documentElement.getAttribute("data-theme") == "light" ) {
+    document.documentElement.setAttribute("data-theme", "dark");
+  } else {
+    document.documentElement.setAttribute("data-theme", "light");
+  }
+})
 // ==========================================================================
 // Navigation Contact Button Hover Effects
 // ==========================================================================
