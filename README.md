@@ -71,5 +71,4 @@ PathLine-ChartwellPartners/
 
 ## 👨‍💻 Developed by
 
-Mo'men Hussein
-Intern @ Pathline
+Mo'men Hussein, Intern @ Pathline
