@@ -276,7 +276,7 @@ nav .links .dropdown {
   --width: 300px;
   width: var(--width);
   margin-left: calc(var(--width) / -2);
-  background-color: var(--contrast-color);
+  background-color: var(--primary-section-color);
   color: var(--text-color);
   box-shadow: var(--main-shadow);
   padding: 0;
@@ -315,7 +315,7 @@ nav .links .dropdown::before {
   position: absolute;
   border-width: 10px;
   border-style: solid;
-  border-color: transparent transparent var(--contrast-color) transparent;
+  border-color: transparent transparent var(--primary-section-color) transparent;
 }
 
 nav .links .dropdown li {
