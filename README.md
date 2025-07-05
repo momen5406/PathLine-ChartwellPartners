@@ -60,6 +60,7 @@ PathLine-ChartwellPartners/
 ├── script.js
 └── assets/
     └── images, fonts, etc.
+```
 
 ## 📣 Credits
 
