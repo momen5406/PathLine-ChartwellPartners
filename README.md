@@ -1,37 +1,37 @@
-# 🧠 PathLine-ChartwellPartners (Clone & Feature Enhancement)
+# 🧠 PathLine-ChartwellPartners (Clone & Feature Extension)
 
-This project is a **cloned and enhanced version** of the real [Chartwell Partners](https://chartwellpartners.com/) website. The goal of this task was to **rebuild the original layout**, maintain its visual identity, and **add new interactive and responsive features** as part of my internship at **Pathline**.
+The project was a **cloned and enhanced version** of the real [Chartwell Partners](https://chartwellpartners.com/) website. The assignment in this project was to **replicate the original framework**, maintain its visual look, and **add new interactive and responsive features** as part of the **Pathline Internship Program**.
 
 ---
 
-## 📌 Task Objective
+## 📌 Task Goal
 
-This was a frontend development assignment for the **Pathline Internship Program**, where I was asked to:
-- Recreate an existing professional website layout.
-- Use modern web standards (HTML, CSS, JS).
-- Add useful and creative enhancements.
-- Practice clean and scalable code architecture.
+This was a frontend development assignment for the **Pathline Internship Program**, where I needed to:
+- Reconstruct a modern professional website layout.
+- Follow modern web standards (HTML, CSS, JS).
+- Add useful and new features.
+- Adhere to clean and scalable code architecture.
 
 ---
 
 ## 🚀 Features Added
 
-In addition to replicating the original site’s structure and style, I added:
+In addition to duplicating the initial site structure and appearance, I added:
 
 1. **💡 Light / Dark Mode Toggle**
-   - Smooth theme switching using CSS variables and JavaScript.
+   - Clean theme switch with CSS variables and JavaScript.
 
 2. **📱 Responsive Hamburger Menu**
-   - Mobile-friendly navbar with dropdown support.
+   - Responsive navbar with dropdown effect.
 
 3. **🔝 Scroll-to-Top Button**
-   - Appears on scroll and returns user to the top with smooth animation.
+   - Displays on scroll and returns user to the top with smooth animation.
 
 4. **⏳ Animated Loading Overlay**
-   - Stylish loading animation when the site first loads.
+   - Subtle loading animation when the website is first loaded.
 
-5. **🌀 Mobile Services Carousel**
-   - Auto-animated fading of services section on smaller devices using pure CSS.
+5. **📶 Scroll Progress Indicator**
+   -  A dynamic progress bar at the top of the site showing how much of the page is scrolled.
 
 ---
 
@@ -40,8 +40,9 @@ In addition to replicating the original site’s structure and style, I added:
 - **HTML5** – Semantic structure
 - **CSS3** – Responsive layout, animations, variables
 - **JavaScript (Vanilla)** – DOM manipulation, scroll events, theme toggle
-- **Font Awesome** – Icons
-- **GitHub Pages** – Hosting
+- **Font Awesome** – Icons via CDN  
+- **Google Fonts** – Typography via CDN  
+- **GitHub Pages** – Deployment & Hosting
 
 ---
 
@@ -56,10 +57,12 @@ In addition to replicating the original site’s structure and style, I added:
 ```bash
 PathLine-ChartwellPartners/
 ├── index.html
-├── style.css
-├── script.js
-└── assets/
-    └── images, fonts, etc.
+├── css/
+│ └── main.css
+├── js/
+│ └── main.js
+├── img/
+│ └── (All website images)
 ```
 
 ## 📣 Credits
