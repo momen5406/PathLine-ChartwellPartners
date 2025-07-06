@@ -50,30 +50,19 @@
       <i id="darkMode" class="fa-solid fa-moon darkMode"></i>
     </div>
 
-    <div id="successMsg">
-      Message Sent!!
-    </div>
-
-    <div id="failedMsg">
-      Please fill all the inputs!!
-    </div>
-    <!--
-      Navigation Bar Structure:
-      - Logo
-      - Search & Close Icons (mobile)
-      - Phone Search Input (mobile)
-      - Navigation Links (with dropdowns)
-      - Search Bar (desktop)
-      - Contact Button
-      - Hamburger Menu (mobile)
-    -->
+    <!-- Form Submission Feedback Messages -->
+    <div id="successMsg">Message Sent!!</div>
+    <div id="failedMsg">Please fill all the inputs!!</div>
+    
+    <!-- Navigation Bar -->
     <nav>
-      <!-- Logo Section -->
       <div class="logo">
         <img src="img/logo.svg" alt="Chartwell Partners" />
       </div>
 
       <ul id="menuLinks" class="links">
+        <!-- Dropdown Menus -->
+        <!-- Each list item includes submenus (Our Firm, Industries, Services, etc.) -->
         <li id="dropdown-link" class="dropdown-link">
           <a href="#">Our Firm <i class="fa-solid fa-angle-down"></i></a>
           <ul id="dropdownMenu" class="dropdown">
@@ -136,14 +125,14 @@
         <a id="contactBtn" href="#contact" class="in-contact special-button"><span>Contact Us</span></a>
       </ul>
 
+      <!-- Desktop Contact Button -->
       <a id="contactBtn" href="#contact" class="out-contact special-button"><span>Contact Us</span></a>
+
       <!-- Hamburger Menu Icon (mobile) -->
       <li id="menuBtn" class="fa-solid fa-bars"></li>
     </nav>
 
-    <!-- =========================
-        Header Section
-        ========================= -->
+    <!-- Header Section -->
     <header>
       <img src="img/58_ChartwellTeamPortraits_03-29-23.jpg" alt="Chartwell Partners">
       <h2 data-aos="fade-up" data-aos-delay="900">
@@ -151,9 +140,7 @@
       </h2>
     </header>
 
-    <!-- =========================
-        Services Section
-        ========================= -->
+    <!-- Services Section -->
     <div class="services">
       <p>Specializing in:</p>
       <div class="service">
@@ -167,9 +154,7 @@
       </div>
     </div>
 
-    <!-- =========================
-        Expertise Section
-        ========================= -->
+    <!-- Expertise Section -->
     <section class="expertise">
       <div class="container">
         <h2 data-aos="fade-up">Industry Expertise</h2>
@@ -180,6 +165,7 @@
           <a id="contactBtn" class="special-button" data-aos="fade-up" href="#"><span>Meet the Firm</span></a>
         </div>
         <div class="row align-items-stretch g-4">
+          <!-- Expertise Cards (Biopharmaceuticals, Financial Services, Real Estate) -->
           <!-- Biopharmaceuticals -->
           <div data-aos="fade-up" data-aos-delay="300" class="col-md-4 col-sm-6 box">
             <div class="inner h-100">
@@ -226,9 +212,7 @@
       </div>
     </section>
 
-    <!-- =========================
-        Team Section
-        ========================= -->
+    <!-- Team Section -->
     <section class="team">
       <div class="container">
         <h2>Our Team</h2>
@@ -315,9 +299,7 @@
       </div>
     </section>
 
-    <!-- =========================
-        Companies Section
-        ========================= -->
+    <!-- Companies Section -->
     <section class="companies">
       <div class="container">
         <h2 data-aos="fade-up">Why Companies Trust Us</h2>
@@ -373,12 +355,13 @@
       </div>
     </section>
 
-    <!-- Start Contact -->
+    <!-- Contact Section -->
     <section id="contact" class="contact">
       <div class="container">
         <h2 data-aos="fade-up">Contact Us</h2>
 
         <form>
+          <!-- Name, Email, and Message Inputs with validation hints -->
           <div class="form-floating mb-3" data-aos="fade-up">
             <input oninput="validation(this)" type="text" class="form-control" id="name" placeholder="First Name...">
             <p id="nameError" class="text-danger mt-2 d-none">*Please enter your full name using two words, each starting with a capital letter</p>
@@ -397,11 +380,8 @@
         </form>
       </div>
     </section>
-    <!-- End Contact -->
 
-    <!-- =========================
-        Footer Section
-        ========================= -->
+    <!-- Footer Section -->
     <footer>
       <div class="container">
         <div class="row gy-5">
@@ -485,6 +465,7 @@
     -->
     <script src="js/main.js"></script>
 
+    <!-- AOS Animation Init -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init({
