@@ -2,7 +2,7 @@
 
 ## 📁 Project Overview
 
-This is a responsive, dark-mode-enabled, animated website cloned from Chartwell Partners. It includes modern UI/UX features, dynamic JavaScript interactions, and optimized SCSS/CSS architecture for both light and dark themes.
+This is a modern animated website clone of Chartwell Partners that is responsive and has dark mode capabilities. It has a modern UI and modern UX, features mouse interactions through JS, and an optimized SCSS/CSS architecture for both dark and light theme modes.
 
 ---
 
@@ -63,7 +63,7 @@ PathLine-ChartwellPartners/
 
 ## 🌗 Dark Mode System
 
-Dark mode is toggled using a `data-theme` attribute on `<html>`. CSS variables update dynamically based on the theme:
+Dark mode is toggled with a `data-theme` attribute on the `<html>`, and CSS variables are updated based on the theme:
 
 ```css
 :root {
@@ -74,7 +74,7 @@ Dark mode is toggled using a `data-theme` attribute on `<html>`. CSS variables u
 }
 ```
 
-Toggled using the `#colorMode` button which switches icons and adjusts the theme.
+Toggled via the `#colorMode` button which switches icons and changes the theme.
 
 ---
 
@@ -111,7 +111,7 @@ backToTop.addEventListener("click", () => {
 
 ### 4. Navigation Dropdowns (Desktop & Mobile)
 
-Dropdowns appear on hover (desktop) or click (mobile). In mobile, other open dropdowns collapse when one expands.
+Dropdowns appear on hover (desktop) and click (mobile), and in mobile, other open dropdowns collapse when one expands.
 
 ### 5. Dark Mode Toggle
 
@@ -147,13 +147,13 @@ var validationPatterns = {
 }
 ```
 
-Shows valid/invalid state using Bootstrap classes and toggles success/failure messages accordingly.
+Valid/invalid state is shown using Bootstrap classes so success/failure messages toggle accordingly.
 
 ---
 
 ## 📄 License
 
-This project is for educational/demo purposes and not affiliated with Chartwell Partners.
+This is an educational/demo project that is not affiliated with Chartwell Partners.
 
 ---
 
