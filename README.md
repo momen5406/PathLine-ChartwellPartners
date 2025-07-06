@@ -65,7 +65,7 @@ PathLine-ChartwellPartners/
 ├── index.html
 ├── assets/
 │   ├── css/
-│   │   └── styles.css
+│   │   └── main.css
 │   ├── js/
 │   │   └── main.js
 │   ├── img/
