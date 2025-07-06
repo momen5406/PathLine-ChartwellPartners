@@ -160,8 +160,8 @@ This project is for educational/demo purposes and not affiliated with Chartwell 
 ## ✍️ Author
 
 **Mo'men Hussein**
-Web Developer & CS Student @ FCAI
-GitHub: [@momenhussein](https://github.com/momenhussein)
+Web Developer & CS Student @ FCAIH
+Linkedin: [@momen5406](https://linkedin.com/in/momen5406)
 
 ---
 
