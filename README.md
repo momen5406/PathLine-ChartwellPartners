@@ -57,13 +57,22 @@ In addition to duplicating the initial site structure and appearance, I added:
 ```bash
 PathLine-ChartwellPartners/
 ├── index.html
-├── css/
-│ └── main.css
-├── js/
-│ └── main.js
-├── img/
-│ └── (All website images)
+├── assets/
+│   ├── css/
+│   │   └── styles.css
+│   ├── js/
+│   │   └── main.js
+│   ├── img/
+│   │   └── [images]
+│   └── fonts/
+├── README.md
+└── docs/
+    └── technical-doc.md
 ```
+
+## 📘 Documentation
+
+- [Technical Documentation](docs/technical-documentation.md)
 
 ## 📣 Credits
 
