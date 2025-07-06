@@ -491,7 +491,7 @@ nav #menuBtn {
   }
 
   nav .links .dropdown li::before {
-    color: white;
+    color: var(--secondary-color);
   }
 
   nav .links .in-contact {
