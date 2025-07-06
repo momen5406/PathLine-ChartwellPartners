@@ -14,6 +14,12 @@ This was a frontend development assignment for the **Pathline Internship Program
 
 ---
 
+## 📘 Documentation
+
+- [Technical Documentation](docs/technical-documentation.md)
+
+---
+
 ## 🚀 Features Added
 
 In addition to duplicating the initial site structure and appearance, I added:
@@ -69,10 +75,6 @@ PathLine-ChartwellPartners/
 └── docs/
     └── technical-doc.md
 ```
-
-## 📘 Documentation
-
-- [Technical Documentation](docs/technical-documentation.md)
 
 ## 📣 Credits
 
