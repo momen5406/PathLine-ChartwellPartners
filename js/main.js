@@ -1,3 +1,12 @@
+// !! #Feature 2: Added a Scroll Progress bar on top
+window.addEventListener("scroll", () => {
+  const scrollTop = window.scrollY;
+  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  const scrollPercent = (scrollTop / docHeight) * 100;
+  document.getElementById("scrollProgressBar").style.width = `${scrollPercent}%`;
+});
+
+// !! #Feature 3: Added a loading screen
 window.addEventListener("load", function () {
   const loader = document.querySelector("#loader");
 
@@ -10,6 +19,7 @@ window.addEventListener("load", function () {
   }, 500); 
 })
 
+// !! #Feature 4: Added back to top button
 const backToTop = document.querySelector("#backToTop");
 
 window.onscroll = function () {
@@ -24,13 +34,20 @@ backToTop.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 })
 
+// !! #Feature 5: Added Dark Mode Button
 const colorMode = document.querySelector("#colorMode");
+const colorModeLight = document.querySelector("#lightMode")
+const colorModeDark = document.querySelector("#darkMode")
 
 colorMode.addEventListener("click", () => {
   if ( document.documentElement.getAttribute("data-theme") == "light" ) {
     document.documentElement.setAttribute("data-theme", "dark");
+    colorModeLight.style.opacity = "100";
+    colorModeDark.style.opacity = "0";
   } else {
     document.documentElement.setAttribute("data-theme", "light");
+    colorModeLight.style.opacity = "0";
+    colorModeDark.style.opacity = "100";
   }
 })
 // ==========================================================================
@@ -129,6 +146,68 @@ if ( window.innerWidth <= 1300 ) {
     
 }
 
+
+// Contact Section
+const form = document.querySelector("form");
+const submitBtn = document.querySelector("form button");
+const NameInput = document.querySelector("form #name");
+const emailInput = document.querySelector("form #email");
+const msgInput = document.querySelector("form #msg");
+
+function clearInputs() {
+  NameInput.value = '';
+  emailInput.value = '';
+  msgInput.value = '';
+}
+
+var validationPatterns = {
+  name: /^[A-Z][a-z]+ [A-Z][a-z]+$/,
+  email: /[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/,
+}
+
+function validation(input) {
+  let isMatched =  validationPatterns[input.id].test(input.value);
+  const errorMsg = input.nextElementSibling;
+
+  if ( isMatched ) {
+    input.classList.remove("is-invalid");
+    input.classList.add("is-valid");
+    errorMsg.classList.add("d-none");
+  } else {
+    input.classList.remove("is-valid");
+    input.classList.add("is-invalid");
+    errorMsg.classList.remove("d-none");
+  }
+}
+
+
+
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  var userMsg = {
+    name: NameInput.value,
+    email: emailInput.value,
+    message: msgInput.value
+  }
+  
+  if ( userMsg.name != '' && userMsg.email != '' && userMsg.message != '' ) {
+    document.querySelector("#successMsg").classList.add("msg-visible");
+    setInterval(() => {
+      document.querySelector("#successMsg").classList.remove("msg-visible");
+    }, 3000);
+    clearInputs();
+    NameInput.classList.remove("is-valid");
+    NameInput.classList.remove("is-invalid");
+    emailInput.classList.remove("is-valid");
+    emailInput.classList.remove("is-invalid");
+  } else {
+    document.querySelector("#failedMsg").classList.add("msg-visible");
+    setInterval(() => {
+      document.querySelector("#failedMsg").classList.remove("msg-visible");
+    }, 3000);
+  }
+})
 
 
 // ==========================================================================

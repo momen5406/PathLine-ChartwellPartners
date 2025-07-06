@@ -31,16 +31,31 @@
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
+    <!-- !! #Feature 2: Added a Scroll Progress bar on top  -->
+    <div id="scrollProgressBar"></div>
+
+    <!-- !! #Feature 3: Added a loading screen -->
     <div id="loader" class="loading position-fixed top-0 start-0 w-100 h-100 text-white">
       <i class="fa-solid fa-spinner fa-spin fa-3x"></i>
     </div>
 
+    <!-- !! #Feature 4: Added back to top button -->
     <div id='backToTop' class="backToTop">
       <i class="fa-solid fa-arrow-up"></i>
     </div>
 
+    <!-- !! #Feature 5: Added Dark Mode Button -->
     <div id="colorMode" class="colorMode">
-      <i class="fa-solid fa-palette"></i>
+      <i id="lightMode" class="fa-solid fa-sun lightMode"></i>
+      <i id="darkMode" class="fa-solid fa-moon darkMode"></i>
+    </div>
+
+    <div id="successMsg">
+      Message Sent!!
+    </div>
+
+    <div id="failedMsg">
+      Please fill all the inputs!!
     </div>
     <!--
       Navigation Bar Structure:
@@ -118,10 +133,10 @@
           </ul>
         </li>
 
-        <a id="contactBtn" href="#" class="in-contact special-button"><span>Contact Us</span></a>
+        <a id="contactBtn" href="#contact" class="in-contact special-button"><span>Contact Us</span></a>
       </ul>
 
-      <a id="contactBtn" href="#" class="out-contact special-button"><span>Contact Us</span></a>
+      <a id="contactBtn" href="#contact" class="out-contact special-button"><span>Contact Us</span></a>
       <!-- Hamburger Menu Icon (mobile) -->
       <li id="menuBtn" class="fa-solid fa-bars"></li>
     </nav>
@@ -358,6 +373,32 @@
       </div>
     </section>
 
+    <!-- Start Contact -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2>Contact Us</h2>
+
+        <form>
+          <div class="form-floating mb-3">
+            <input oninput="validation(this)" type="text" class="form-control" id="name" placeholder="First Name...">
+            <p id="nameError" class="text-danger mt-2 d-none">*Please enter your full name using two words, each starting with a capital letter</p>
+            <label for="name">Your Name</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input oninput="validation(this)" type="email" class="form-control" id="email" placeholder="Email Address">
+            <p id="emailError" class="text-danger mt-2 d-none">*Please enter a valid email address in the format: example@domain.com</p>
+            <label for="email">Email Address</label>
+          </div>
+          <div class="form-floating">
+            <textarea class="form-control" placeholder="Leave your Message here" id="msg" style="height: 200px"></textarea>
+            <label for="msg">Message</label>
+          </div>
+          <button id="contactBtn" class="special-button mt-3"><span>Submit</span></button>
+        </form>
+      </div>
+    </section>
+    <!-- End Contact -->
+
     <!-- =========================
         Footer Section
         ========================= -->
@@ -393,7 +434,7 @@
             <p class="mb-md-4 mb-5">
               A retained executive search firm dedicated to identifying exceptional leaders.
             </p>
-            <a id="contactBtn" href="#" class="special-button">
+            <a id="contactBtn" href="#contact" class="special-button">
               <span>Contact US</span>
             </a>
           </div>
